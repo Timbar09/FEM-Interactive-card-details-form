@@ -14,7 +14,19 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-size: 0.875rem;
+  font-family: u.$ff-spaceGrotesk;
+  font-size: u.$fz-med;
   font-weight: 500;
   line-height: 1.4;
+}
+
+.app {
+  background-image: url('/design/mobile-design.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 800px;
+
+  @include u.breakpoint-up(large) {
+    background-image: url('/design/desktop-design.jpg');
+  }
 }

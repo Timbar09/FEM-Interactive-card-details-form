@@ -12,7 +12,110 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-size: 0.875rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.4;
+}
+
+.app {
+  background-image: url("/design/mobile-design.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 800px;
+}
+@media (min-width: 64em) {
+  .app {
+    background-image: url("/design/desktop-design.jpg");
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+p {
+  margin-top: 0;
+}
+
+.card {
+  background-image: url("/images/bg-maain-mobile.png");
+  color: hsl(0deg, 0%, 100%);
+}
+.card__container {
+  padding: 32px 16px;
+}
+.card .card-box {
+  position: relative;
+  width: 286px;
+  height: 157px;
+  border-radius: 5px;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card__back {
+  left: 28px;
+  padding: 0 7.25% 0 8.5%;
+  text-align: right;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background: url("/images/bg-card-back.png");
+}
+.card__cvc-number {
+  position: relative;
+  display: block;
+  font-size: 0.6875rem;
+  padding: 9px 12px;
+  width: 100%;
+  top: 1px;
+  background-color: hsl(270deg, 3%, 87%);
+  border-radius: 3px;
+}
+.card__front {
+  background: url("/images/bg-card-front.png");
+  top: -63px;
+  left: -28px;
+  padding: 18px 19px;
+}
+.card__circles {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+.card__circles > span {
+  display: inline-block;
+  border: solid 2px hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+}
+.card__circles > span:first-child {
+  width: 30px;
+  height: 30px;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.card__circles > span:last-child {
+  width: 15px;
+  height: 15px;
+}
+.card__number {
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+.card .holder-exp-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+}
+.card__expiry-date {
+  letter-spacing: 1px;
 }/*# sourceMappingURL=style.css.map */

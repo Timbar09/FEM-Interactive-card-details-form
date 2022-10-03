@@ -1,1 +1,93 @@
 @use '../util' as u;
+
+.card {
+  background-image: url('/images/bg-maain-mobile.png');
+  color: u.$white;
+
+  &__container {
+    padding: 32px 16px;
+  }
+
+  .card-box {
+    position: relative;
+    width: 286px;
+    height: 157px;
+    border-radius: 5px;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__back {
+    left: 28px;
+    padding: 0 7.25% 0 8.5%;
+    text-align: right;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: url('/images/bg-card-back.png');
+  }
+
+  &__cvc-number {
+    position: relative;
+    display: block;
+    font-size: u.$fz-sm;
+    padding: 9px 12px;
+    width: 100%;
+    top: 1px;
+    background-color: u.$lightGrayishViolet;
+    border-radius: 3px;
+  }
+
+  &__front {
+    background: url('/images/bg-card-front.png');
+    top: -63px;
+    left: -28px;
+    padding: 18px 19px;
+  }
+
+  &__circles {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 36px;
+
+    > span {
+      display: inline-block;
+      border: solid 2px u.$white;
+      border-radius: 50%;
+
+      &:first-child {
+        width: 30px;
+        height: 30px;
+        background-color: u.$white;
+      }
+
+      &:last-child {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  &__number {
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  .holder-exp-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: u.$fz-sm;
+    text-transform: uppercase;
+  }
+
+  &__holder {
+  }
+
+  &__expiry-date {
+    letter-spacing: 1px;
+  }
+}
