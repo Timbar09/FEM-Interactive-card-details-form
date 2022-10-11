@@ -18,15 +18,18 @@ body {
   font-size: u.$fz-med;
   font-weight: 500;
   line-height: 1.4;
+  background-color: var(--white);
 }
 
 .app {
-  background-image: url('/design/mobile-design.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 800px;
+  background-image: url('/design/mobile-design.jpg'); // has to be deleted at the end
+  background-repeat: no-repeat; // has to be deleted at the end
+  background-size: contain; // has to be deleted at the end
+  height: 800px; // has to be deleted at the end
 
   @include u.breakpoint-up(large) {
-    background-image: url('/design/desktop-design.jpg');
+    display: flex;
+    height: 900px; // min() could work here
+    background-image: url('/design/desktop-design.jpg'); // has to be deleted at the end
   }
 }
