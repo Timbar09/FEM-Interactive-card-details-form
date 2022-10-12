@@ -7,8 +7,16 @@
   height: 240px;
   color: u.$white;
 
+  @include u.breakpoint-up(medium) {
+    height: 335px;
+  }
+
   @include u.breakpoint-up(large) {
     height: 100%;
+    width: 350px;
+  }
+
+  @include u.breakpoint-up(x-large) {
     width: 485px;
   }
 
@@ -25,11 +33,20 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    @include u.breakpoint-up(medium) {
+      scale: 1.3;
+    }
+
     @include u.breakpoint-up(large) {
+      scale: 0.75;
       margin: 0;
       width: 447px;
       height: 246px;
       border-radius: 10px;
+    }
+
+    @include u.breakpoint-up(x-large) {
+      scale: 1;
     }
   }
 
@@ -42,7 +59,17 @@
     align-items: center;
     background: url('/images/bg-card-back.png');
 
+    @include u.breakpoint-up(medium) {
+      top: 64px;
+    }
+
     @include u.breakpoint-up(large) {
+      top: 400px;
+      left: 149px;
+      padding: 0px 40px 0 45px;
+    }
+
+    @include u.breakpoint-up(x-large) {
       top: 437px;
       left: 242px;
     }
@@ -52,11 +79,18 @@
     position: relative;
     display: block;
     font-size: u.$fz-sm;
-    padding: 9px 12px;
+    padding: 8px 12px;
     width: 100%;
     top: 1px;
     background-color: u.$darkGrayishViolet;
-    border-radius: 3px;
+    border-radius: 5px;
+
+    @include u.breakpoint-up(large) {
+      font-size: 14px;
+      padding: 9px 19px 9px;
+      top: -3px;
+      letter-spacing: 1.3px;
+    }
   }
 
   &__front {
@@ -65,10 +99,18 @@
     left: -28px;
     padding: 18px 19px;
 
+    @include u.breakpoint-up(medium) {
+      top: 29px;
+    }
+
     @include u.breakpoint-up(large) {
       top: -92px;
-      left: 148px;
+      left: 55px;
       padding: 28px 33px 0 31px;
+    }
+
+    @include u.breakpoint-up(x-large) {
+      left: 148px;
     }
   }
 
