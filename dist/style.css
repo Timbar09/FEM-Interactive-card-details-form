@@ -254,17 +254,46 @@ p {
 .form__group label {
   display: block;
   text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: 1.3px;
-  margin-bottom: 7px;
+  font-size: 12px;
+  letter-spacing: 1.965px;
+  margin-bottom: 8px;
 }
-.form__group > input {
+.form__group input {
   width: 100%;
   padding: 11px 15px;
   font-family: inherit;
-  font-size: 16px;
-  letter-spacing: 1.1px;
+  font-size: 17px;
+  letter-spacing: 0.55px;
   border: solid 1px hsl(270deg, 3%, 87%);
   background-color: transparent;
-  border-radius: 10px;
+  border-radius: 8px;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 19px;
+}
+.form__group-grid {
+  display: flex;
+  gap: 10px;
+}
+.form__group-grid-group:first-child {
+  flex: 1;
+}
+.form__group-grid-group:first-child .expiry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.form__group-grid-group:last-child {
+  flex: 1.085;
+}
+.form #submit-btn {
+  background-color: hsl(278deg, 68%, 11%);
+  color: hsl(0deg, 0%, 100%);
+  margin-top: 9px;
+  padding: 16px;
+  border: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -52,20 +52,72 @@
         <div class="form__grid">
           <form action="#" class="form__content">
             <div class="form__group">
-              <label for="name">Cardholder Name</label>
+              <label for="card-holder-name">Cardholder Name</label>
               <input
-                id="name"
-                name="name"
+                id="card-holder-name"
+                name="card-holder-name"
                 type="text"
                 placeholder="e.g. Jane Appleseed"
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="card-number">Card Number</label>
+              <input
+                id="card-number"
+                name="card-number"
+                type="text"
+                inputmode="numeric"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
+            </div>
+
+            <div class="form__group form__group-grid">
+              <div class="form__group-grid-group">
+                <label for="card-expiry">Exp. Date (MM/YY)</label>
+                <fieldset id="card-expiry" class="expiry-grid">
+                  <input
+                    id="card-expiry-month"
+                    name="card-expiry-month"
+                    type="text"
+                    inputmode="numeric"
+                    placeholder="MM"
+                  />
+                  <input
+                    id="card-expiry-year"
+                    name="card-expiry-year"
+                    type="text"
+                    inputmode="numeric"
+                    placeholder="YY"
+                  />
+                </fieldset>
+              </div>
+              <div class="form__group-grid-group">
+                <label for="cvc-number">CVC</label>
+                <input
+                  id="cvc-number"
+                  name="cvc-number"
+                  type="text"
+                  inputmode="numeric"
+                  placeholder="e.g. 123"
+                />
+              </div>
+            </div>
+
+            <div class="form__group">
+              <input
+                class="form__submit-btn"
+                id="submit-btn"
+                name="submit-btn"
+                type="button"
+                value="Confirm"
               />
             </div>
           </form>
         </div>
       </section>
     </main>
-    <!-- Card Number e.g. 1234 5678 9123 0000 Exp. Date (MM/YY) MM YY CVC
-    e.g. 123 Confirm -->
+    <!-- Exp. Date (MM/YY) MM YY -->
 
     <!-- Completed state start -->
 
