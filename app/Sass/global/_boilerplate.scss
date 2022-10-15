@@ -18,7 +18,9 @@ body {
   font-size: u.$fz-med;
   font-weight: 500;
   line-height: 1.4;
-  background-color: var(--white);
+  background-color: var(
+    --white
+  ); // make this linear-gradient, rigth to left darkblue to white
 }
 
 .app {

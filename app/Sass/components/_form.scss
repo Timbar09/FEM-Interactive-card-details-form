@@ -1,1 +1,27 @@
 @use '../util' as u;
+
+.form {
+  flex: 1;
+  padding: 90px 24px;
+
+  &__group {
+    label {
+      display: block;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1.3px;
+      margin-bottom: 7px;
+    }
+
+    > input {
+      width: 100%;
+      padding: 11px 15px;
+      font-family: inherit;
+      font-size: 16px;
+      letter-spacing: 1.1px;
+      border: solid 1px u.$lightGrayishViolet;
+      background-color: transparent;
+      border-radius: 10px;
+    }
+  }
+}
