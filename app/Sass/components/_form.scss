@@ -4,6 +4,23 @@
   flex: 1;
   padding: 90px 24px;
 
+  &__grid {
+    @include u.breakpoint-up(large) {
+      display: grid;
+      place-items: center;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    max-width: 381px;
+    margin: auto;
+
+    @include u.breakpoint-up(large) {
+      margin: 0;
+    }
+  }
+
   &__group {
     label {
       display: block;
@@ -26,11 +43,19 @@
 
     &:not(:last-child) {
       margin-bottom: 19px;
+
+      @include u.breakpoint-up(large) {
+        margin-bottom: 25px;
+      }
     }
 
     &-grid {
       display: flex;
       gap: 10px;
+
+      @include u.breakpoint-up(large) {
+        gap: 20px;
+      }
 
       &-group {
         &:first-child {
@@ -48,6 +73,10 @@
 
         &:last-child {
           flex: 1.085;
+
+          @include u.breakpoint-up(large) {
+            flex: 1.12;
+          }
         }
       }
     }
@@ -59,5 +88,9 @@
     margin-top: 9px;
     padding: 16px;
     border: 0;
+
+    @include u.breakpoint-up(large) {
+      margin-top: 14px;
+    }
   }
 }

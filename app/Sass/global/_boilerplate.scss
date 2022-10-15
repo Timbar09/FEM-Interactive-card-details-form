@@ -31,6 +31,7 @@ body {
 
   @include u.breakpoint-up(large) {
     display: flex;
+    gap: 120px;
     height: 900px; // min() could work here
     background-image: url('/design/desktop-design.jpg'); // has to be deleted at the end
   }

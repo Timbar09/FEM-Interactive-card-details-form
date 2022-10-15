@@ -28,6 +28,7 @@ body {
 @media (min-width: 64em) {
   .app {
     display: flex;
+    gap: 120px;
     height: 900px;
     background-image: url("/design/desktop-design.jpg");
   }
@@ -251,6 +252,22 @@ p {
   flex: 1;
   padding: 90px 24px;
 }
+@media (min-width: 64em) {
+  .form__grid {
+    display: grid;
+    place-items: center;
+    height: 100%;
+  }
+}
+.form__content {
+  max-width: 381px;
+  margin: auto;
+}
+@media (min-width: 64em) {
+  .form__content {
+    margin: 0;
+  }
+}
 .form__group label {
   display: block;
   text-transform: uppercase;
@@ -271,9 +288,19 @@ p {
 .form__group:not(:last-child) {
   margin-bottom: 19px;
 }
+@media (min-width: 64em) {
+  .form__group:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
 .form__group-grid {
   display: flex;
   gap: 10px;
+}
+@media (min-width: 64em) {
+  .form__group-grid {
+    gap: 20px;
+  }
 }
 .form__group-grid-group:first-child {
   flex: 1;
@@ -290,10 +317,20 @@ p {
 .form__group-grid-group:last-child {
   flex: 1.085;
 }
+@media (min-width: 64em) {
+  .form__group-grid-group:last-child {
+    flex: 1.12;
+  }
+}
 .form #submit-btn {
   background-color: hsl(278deg, 68%, 11%);
   color: hsl(0deg, 0%, 100%);
   margin-top: 9px;
   padding: 16px;
   border: 0;
+}
+@media (min-width: 64em) {
+  .form #submit-btn {
+    margin-top: 14px;
+  }
 }/*# sourceMappingURL=style.css.map */
