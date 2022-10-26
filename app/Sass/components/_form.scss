@@ -4,6 +4,14 @@
   flex: 1;
   padding: 90px 24px;
 
+  @include u.breakpoint-up(medium) {
+    padding: 150px 24px;
+  }
+
+  @include u.breakpoint-up(large) {
+    padding: 90px 24px;
+  }
+
   &__grid {
     @include u.breakpoint-up(large) {
       display: grid;
@@ -19,6 +27,12 @@
     @include u.breakpoint-up(large) {
       margin: 0;
     }
+
+    &:invalid {
+      .from__group-input-container {
+        background: u.$invalid;
+      }
+    }
   }
 
   &__group {
@@ -30,15 +44,44 @@
       margin-bottom: 8px;
     }
 
+    &-input-container {
+      position: relative;
+      border-radius: 8px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: -1.15px;
+        border-radius: inherit;
+        border-radius: 9px;
+        background: u.$lightGrayishViolet;
+      }
+
+      &:focus-within {
+        &::before {
+          background: u.$gradient;
+        }
+      }
+    }
+
     input {
+      position: relative;
+      display: block;
       width: 100%;
       padding: 11px 15px;
       font-family: inherit;
       font-size: 17px;
       letter-spacing: 0.55px;
-      border: solid 1px u.$lightGrayishViolet;
-      background-color: transparent;
+      border: 0;
+      // border: solid 1px;
+      // border-image: u.$gradient 1;
       border-radius: 8px;
+      background-color: u.$white;
+      cursor: pointer;
+
+      &:focus-visible {
+        outline: 0;
+      }
     }
 
     &:not(:last-child) {
@@ -82,12 +125,23 @@
     }
   }
 
+  &__error-messsage {
+    font-size: 12px;
+    letter-spacing: 1.965px;
+    color: u.$invalid;
+  }
+
   #submit-btn {
     background-color: u.$veryDarkViolet;
     color: u.$white;
     margin-top: 9px;
     padding: 16px;
     border: 0;
+    transition: 150ms ease-in-out;
+
+    &:hover {
+      opacity: 0.85;
+    }
 
     @include u.breakpoint-up(large) {
       margin-top: 14px;

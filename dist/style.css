@@ -16,13 +16,16 @@ body {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.4;
-  background-color: var(--white);
+  background: hsl(0deg, 0%, 100%);
+}
+@media (min-width: 64em) {
+  body {
+    background: linear-gradient(90deg, hsl(278deg, 68%, 11%) 20%, hsl(0deg, 0%, 100%), hsl(0deg, 0%, 100%), hsl(0deg, 0%, 100%));
+  }
 }
 
 .app {
-  background-image: url("/design/mobile-design.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-color: hsl(0deg, 0%, 100%);
   height: 800px;
 }
 @media (min-width: 64em) {
@@ -30,7 +33,6 @@ body {
     display: flex;
     gap: 120px;
     height: 900px;
-    background-image: url("/design/desktop-design.jpg");
   }
 }
 
@@ -61,6 +63,7 @@ p {
 }
 @media (min-width: 64em) {
   .card {
+    background-image: url("/images/bg-main-desktop.png");
     height: 100%;
     width: 350px;
   }
@@ -252,6 +255,16 @@ p {
   flex: 1;
   padding: 90px 24px;
 }
+@media (min-width: 40em) {
+  .form {
+    padding: 150px 24px;
+  }
+}
+@media (min-width: 64em) {
+  .form {
+    padding: 90px 24px;
+  }
+}
 @media (min-width: 64em) {
   .form__grid {
     display: grid;
@@ -268,6 +281,9 @@ p {
     margin: 0;
   }
 }
+.form__content:invalid .from__group-input-container {
+  background: hsl(0deg, 100%, 66%);
+}
 .form__group label {
   display: block;
   text-transform: uppercase;
@@ -275,15 +291,36 @@ p {
   letter-spacing: 1.965px;
   margin-bottom: 8px;
 }
+.form__group-input-container {
+  position: relative;
+  border-radius: 8px;
+}
+.form__group-input-container::before {
+  content: "";
+  position: absolute;
+  inset: -1.15px;
+  border-radius: inherit;
+  border-radius: 9px;
+  background: hsl(270deg, 3%, 87%);
+}
+.form__group-input-container:focus-within::before {
+  background: linear-gradient(45deg, hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%));
+}
 .form__group input {
+  position: relative;
+  display: block;
   width: 100%;
   padding: 11px 15px;
   font-family: inherit;
   font-size: 17px;
   letter-spacing: 0.55px;
-  border: solid 1px hsl(270deg, 3%, 87%);
-  background-color: transparent;
+  border: 0;
   border-radius: 8px;
+  background-color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+}
+.form__group input:focus-visible {
+  outline: 0;
 }
 .form__group:not(:last-child) {
   margin-bottom: 19px;
@@ -322,12 +359,21 @@ p {
     flex: 1.12;
   }
 }
+.form__error-messsage {
+  font-size: 12px;
+  letter-spacing: 1.965px;
+  color: hsl(0deg, 100%, 66%);
+}
 .form #submit-btn {
   background-color: hsl(278deg, 68%, 11%);
   color: hsl(0deg, 0%, 100%);
   margin-top: 9px;
   padding: 16px;
   border: 0;
+  transition: 150ms ease-in-out;
+}
+.form #submit-btn:hover {
+  opacity: 0.85;
 }
 @media (min-width: 64em) {
   .form #submit-btn {

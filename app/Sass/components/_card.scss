@@ -12,6 +12,7 @@
   }
 
   @include u.breakpoint-up(large) {
+    background-image: url('/images/bg-main-desktop.png');
     height: 100%;
     width: 350px;
   }

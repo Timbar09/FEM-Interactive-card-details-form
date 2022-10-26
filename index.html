@@ -18,6 +18,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="dist/style.css" />
+    <script defer src="/app/js/script.js"></script>
     <title>Frontend Mentor | Interactive card details form</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -36,14 +37,22 @@
       <section class="card">
         <div class="card__container">
           <div class="card-box card__back">
-            <span class="card__cvc-number">000</span>
+            <span id="card-cvc" class="card__cvc-number card__text"></span>
           </div>
           <div class="card-box card__front">
             <div class="card__circles"><span></span><span></span></div>
-            <p class="card__number">0000 0000 0000 0000</p>
+
+            <p id="card-number" class="card__number card__text"></p>
+
             <div class="holder-exp-grid">
-              <p class="card__holder">Jane Appleseed</p>
-              <p class="card__expiry-date">00/00</p>
+              <p id="card-holder" class="card__holder card__text"></p>
+
+              <p class="card__expiry-date">
+                <span id="card-expiry-month" class="card__text"></span>/<span
+                  id="card-expiry-year"
+                  class="card__text"
+                ></span>
+              </p>
             </div>
           </div>
         </div>
@@ -53,54 +62,73 @@
           <form action="#" class="form__content">
             <div class="form__group">
               <label for="card-holder-name">Cardholder Name</label>
-              <input
-                id="card-holder-name"
-                name="card-holder-name"
-                type="text"
-                placeholder="e.g. Jane Appleseed"
-              />
+              <div class="form__group-input-container">
+                <input
+                  id="card-holder-name"
+                  name="card-holder-name"
+                  type="text"
+                  pattern="/^[a-z ,.'-]+$/i"
+                  placeholder="e.g. Jane Appleseed"
+                />
+              </div>
             </div>
 
             <div class="form__group">
-              <label for="card-number">Card Number</label>
-              <input
-                id="card-number"
-                name="card-number"
-                type="text"
-                inputmode="numeric"
-                placeholder="e.g. 1234 5678 9123 0000"
-              />
+              <label for="card-numbe-form">Card Number</label>
+              <div class="form__group-input-container">
+                <input
+                  id="card-number-form"
+                  name="card-number"
+                  type="text"
+                  inputmode="numeric"
+                  minlength="16"
+                  maxlength="19"
+                  placeholder="e.g. 1234 5678 9123 0000"
+                />
+              </div>
+              <span class="form__error-messsage card-num-error"></span>
             </div>
 
             <div class="form__group form__group-grid">
               <div class="form__group-grid-group">
                 <label for="card-expiry">Exp. Date (MM/YY)</label>
                 <fieldset id="card-expiry" class="expiry-grid">
-                  <input
-                    id="card-expiry-month"
-                    name="card-expiry-month"
-                    type="text"
-                    inputmode="numeric"
-                    placeholder="MM"
-                  />
-                  <input
-                    id="card-expiry-year"
-                    name="card-expiry-year"
-                    type="text"
-                    inputmode="numeric"
-                    placeholder="YY"
-                  />
+                  <div class="form__group-input-container">
+                    <input
+                      id="card-expiry-month-form"
+                      name="card-expiry-month"
+                      type="text"
+                      inputmode="numeric"
+                      maxlength="2"
+                      placeholder="MM"
+                    />
+                  </div>
+                  <div class="form__group-input-container">
+                    <input
+                      id="card-expiry-year-form"
+                      name="card-expiry-year"
+                      type="text"
+                      inputmode="numeric"
+                      maxlength="2"
+                      placeholder="YY"
+                    />
+                  </div>
                 </fieldset>
+                <span class="form__error-messsage expiry error"></span>
               </div>
               <div class="form__group-grid-group">
                 <label for="cvc-number">CVC</label>
-                <input
-                  id="cvc-number"
-                  name="cvc-number"
-                  type="text"
-                  inputmode="numeric"
-                  placeholder="e.g. 123"
-                />
+                <div class="form__group-input-container">
+                  <input
+                    id="cvc-number"
+                    name="cvc-number"
+                    type="text"
+                    inputmode="numeric"
+                    maxlength="3"
+                    placeholder="e.g. 123"
+                  />
+                </div>
+                <span class="form__error-messsage cvc-error"></span>
               </div>
             </div>
 
