@@ -65,12 +65,13 @@
               <div class="form__group-input-container">
                 <input
                   id="card-holder-name"
+                  class="form-text-input"
                   name="card-holder-name"
                   type="text"
-                  pattern="/^[a-z ,.'-]+$/i"
                   placeholder="e.g. Jane Appleseed"
                 />
               </div>
+              <span id="card-name-error" class="form__error-messsage"></span>
             </div>
 
             <div class="form__group">
@@ -78,6 +79,7 @@
               <div class="form__group-input-container">
                 <input
                   id="card-number-form"
+                  class="form-number-input"
                   name="card-number"
                   type="text"
                   inputmode="numeric"
@@ -96,6 +98,7 @@
                   <div class="form__group-input-container">
                     <input
                       id="card-expiry-month-form"
+                      class="form-number-input"
                       name="card-expiry-month"
                       type="text"
                       inputmode="numeric"
@@ -106,6 +109,7 @@
                   <div class="form__group-input-container">
                     <input
                       id="card-expiry-year-form"
+                      class="form-number-input"
                       name="card-expiry-year"
                       type="text"
                       inputmode="numeric"
@@ -116,11 +120,12 @@
                 </fieldset>
                 <span class="form__error-messsage expiry error"></span>
               </div>
-              <div class="form__group-grid-group">
+              <div class="form__group form__group-grid-group">
                 <label for="cvc-number">CVC</label>
                 <div class="form__group-input-container">
                   <input
                     id="cvc-number"
+                    class="form-number-input"
                     name="cvc-number"
                     type="text"
                     inputmode="numeric"
@@ -137,7 +142,7 @@
                 class="form__submit-btn"
                 id="submit-btn"
                 name="submit-btn"
-                type="button"
+                type="submit"
                 value="Confirm"
               />
             </div>

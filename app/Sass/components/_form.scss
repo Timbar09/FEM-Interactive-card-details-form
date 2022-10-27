@@ -47,20 +47,21 @@
     &-input-container {
       position: relative;
       border-radius: 8px;
+      padding: 1px;
+      background: u.$lightGrayishViolet;
 
-      &::before {
-        content: '';
-        position: absolute;
-        inset: -1.15px;
-        border-radius: inherit;
-        border-radius: 9px;
-        background: u.$lightGrayishViolet;
-      }
+      // &::before {
+      //   content: '';
+      //   position: absolute;
+      //   inset: -1.15px;
+      //   border-radius: inherit;
+      //   border-radius: 9px;
+      // }
 
       &:focus-within {
-        &::before {
-          background: u.$gradient;
-        }
+        background: u.$gradient;
+        // &::before {
+        // }
       }
     }
 
@@ -73,9 +74,7 @@
       font-size: 17px;
       letter-spacing: 0.55px;
       border: 0;
-      // border: solid 1px;
-      // border-image: u.$gradient 1;
-      border-radius: 8px;
+      border-radius: 7px;
       background-color: u.$white;
       cursor: pointer;
 
@@ -127,7 +126,6 @@
 
   &__error-messsage {
     font-size: 12px;
-    letter-spacing: 1.965px;
     color: u.$invalid;
   }
 

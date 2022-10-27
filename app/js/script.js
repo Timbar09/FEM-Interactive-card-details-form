@@ -1,3 +1,5 @@
+const form = document.querySelector('.form__content');
+
 const cardholder = document.querySelector('#card-holder');
 const holderInput = document.querySelector('#card-holder-name');
 
@@ -13,8 +15,8 @@ const expiryYearInput = document.querySelector('#card-expiry-year-form');
 const cardCVC = document.querySelector('#card-cvc');
 const cvcInput = document.querySelector('#cvc-number');
 
-//const formInputs = document.querySelectorAll('.form input');
 const cardTexts = document.querySelectorAll('.card__text');
+const formInputs = document.querySelectorAll('.form input');
 
 const cardPlaceHolders = {
   'card-holder': 'Jane Appleseed',
@@ -68,4 +70,38 @@ cvcInput.addEventListener('input', (e) => {
   if (e.target.value == '') {
     cardCVC.textContent = '000';
   }
+});
+
+// FORM VALIDATION
+
+const numberInputs = document.querySelectorAll('.form-number-input');
+const textInputs = document.querySelector('.form-text-input');
+const nameError = document.querySelector('#card-name-error');
+
+form.addEventListener('submit', (e) => {
+  formInputs.forEach((input) => {
+    let messages = [];
+    const formGroup = input.closest('.form__group');
+    const inputParent = input.parentElement;
+    const error = formGroup.querySelector('.form__error-messsage');
+
+    if (input.value == '' || input.value == null) {
+      messages.push(`Can't be blank`);
+    }
+
+    if (
+      input.classList.contains('form-number-input') &&
+      typeof Number(input.value) == 'number' &&
+      input.value.length > 0
+    ) {
+      messages.push('Wrong format, numbers only');
+      console.log(input.value);
+    }
+
+    if (messages.length > 0) {
+      e.preventDefault();
+      inputParent.style.background = '#ff5252';
+      error.innerHTML = messages.join(',');
+    }
+  });
 });
