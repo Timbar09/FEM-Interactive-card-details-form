@@ -250,9 +250,9 @@ p {
   flex: 1;
   padding: 90px 24px;
 }
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .form {
-    padding: 100px 24px;
+    padding: 150px 24px 0;
   }
 }
 @media (min-width: 64em) {

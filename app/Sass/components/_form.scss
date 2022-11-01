@@ -4,19 +4,13 @@
   flex: 1;
   padding: 90px 24px;
 
-  @include u.breakpoint-up(large) {
-    padding: 100px 24px;
+  @include u.breakpoint-up(medium) {
+    padding: 150px 24px 0;
   }
 
   @include u.breakpoint-up(large) {
     padding: 273px 24px 0;
   }
-
-  // &__grid {
-  //   @include u.breakpoint-up(large) {
-  //     height: 100%;
-  //   }
-  // }
 
   &__content {
     max-width: 381px;

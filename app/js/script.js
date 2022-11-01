@@ -1,20 +1,5 @@
 const form = document.querySelector('.form__content');
 
-const cardholder = document.querySelector('#card-holder');
-const holderInput = document.querySelector('#card-holder-name');
-
-const cardNumber = document.querySelector('#card-number');
-const numberInput = document.querySelector('#card-number-form');
-
-const cardExpiryMonth = document.querySelector('#card-expiry-month');
-const expiryMonthInput = document.querySelector('#card-expiry-month-form');
-
-const cardExpiryYear = document.querySelector('#card-expiry-year');
-const expiryYearInput = document.querySelector('#card-expiry-year-form');
-
-const cardCVC = document.querySelector('#card-cvc');
-const cvcInput = document.querySelector('#cvc-number');
-
 const cardTexts = document.querySelectorAll('.card__text');
 const formInputs = document.querySelectorAll('.form-input');
 
@@ -32,6 +17,9 @@ cardTexts.forEach((text) => {
   }
 });
 
+const cardholder = document.querySelector('#card-holder');
+const holderInput = document.querySelector('#card-holder-name');
+
 holderInput.addEventListener('input', (e) => {
   cardholder.textContent = e.target.value;
 
@@ -39,6 +27,9 @@ holderInput.addEventListener('input', (e) => {
     cardholder.textContent = 'Jane Appleseed';
   }
 });
+
+const cardNumber = document.querySelector('#card-number');
+const numberInput = document.querySelector('#card-number-form');
 
 numberInput.addEventListener('input', (e) => {
   cardNumber.textContent = e.target.value;
@@ -48,6 +39,9 @@ numberInput.addEventListener('input', (e) => {
   }
 });
 
+const cardExpiryMonth = document.querySelector('#card-expiry-month');
+const expiryMonthInput = document.querySelector('#card-expiry-month-form');
+
 expiryMonthInput.addEventListener('input', (e) => {
   cardExpiryMonth.textContent = e.target.value;
 
@@ -56,6 +50,9 @@ expiryMonthInput.addEventListener('input', (e) => {
   }
 });
 
+const cardExpiryYear = document.querySelector('#card-expiry-year');
+const expiryYearInput = document.querySelector('#card-expiry-year-form');
+
 expiryYearInput.addEventListener('input', (e) => {
   cardExpiryYear.textContent = e.target.value;
 
@@ -63,6 +60,9 @@ expiryYearInput.addEventListener('input', (e) => {
     cardExpiryYear.textContent = '00';
   }
 });
+
+const cardCVC = document.querySelector('#card-cvc');
+const cvcInput = document.querySelector('#cvc-number');
 
 cvcInput.addEventListener('input', (e) => {
   cardCVC.textContent = e.target.value;
@@ -113,19 +113,17 @@ form.addEventListener('submit', (e) => {
 
   const noErrors = errorTextLengths.every((errMsgLnth) => errMsgLnth === 0);
 
-  console.log(noErrors);
-
-  if (noErrors && formEdit.classList.contains('display')) {
+  if (noErrors && !form.classList.contains('complete')) {
     e.preventDefault();
     formComplete.classList.add('display');
     formComplete.classList.remove('remove');
     formEdit.classList.remove('display');
     formEdit.classList.add('remove');
-  } else {
+    form.classList.add('complete');
+  } else if (noErrors && form.classList.contains('complete')) {
     formComplete.classList.add('remove');
     formComplete.classList.remove('display');
     formEdit.classList.remove('remove');
     formEdit.classList.add('display');
-    XMLHttpRequestUpload();
   }
 });
