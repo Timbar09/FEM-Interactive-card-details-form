@@ -12,6 +12,17 @@
     padding: 273px 24px 0;
   }
 
+  &__grid {
+    .attribution {
+      margin-top: 5rem;
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  }
+
   &__content {
     max-width: 381px;
     margin: auto;

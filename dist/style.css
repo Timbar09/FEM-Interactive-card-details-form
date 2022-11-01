@@ -260,6 +260,14 @@ p {
     padding: 273px 24px 0;
   }
 }
+.form__grid .attribution {
+  margin-top: 5rem;
+  font-size: 11px;
+  text-align: center;
+}
+.form__grid .attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
 .form__content {
   max-width: 381px;
   margin: auto;
