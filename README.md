@@ -54,7 +54,7 @@ Users should be able to:
 
 ### What I learned
 
-On this project I learned JavaScript DOM Traversal. This skill allowed me to manipulate the DOM in a way that was previosly oblivios to me. It allowed me to write cleaner code.
+On this project I learned JavaScript DOM Traversal. This skill allowed me to manipulate the DOM in a way that was previously oblivious to me. It allowed me to write cleaner code.
 
 I learned more about form validation with javaScript. Previously I validated forms directly on the HTML markup but this time I was able to write my own validation code through javaScript.
 
@@ -80,14 +80,13 @@ This was the first challege that required me to use javaScript. I learned a lot 
 ### Useful resources
 
 - [Web Dev Simplified](https://www.youtube.com/watch?v=v7rSSy8CaYE&t=720s) - This helped me learn about JavaScript DOM Traversal and how to use it properly.
-- [MDN](https://developer.mozilla.org/en-US/) - This is an amazing website which helped form validation. I'd recommend it to anyone still learning this concept.
+- [MDN](https://developer.mozilla.org/en-US/) - This is an amazing website which helped me with form validation. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@Timbar09](https://www.frontendmentor.io/profile/Timbar09)
 - Twitter - [@Milez09](https://www.twitter.com/@Milez09)
 
 ## Acknowledgments
 
-A huge shout out to all software development youtubers, educational sites such as MDN, Stackoverflow, FreeCodeCamp and so on, for sharing your knowledge amd helping people across the globe who genuenly want to learn sotware development.
+A huge shout out to all software development youtubers, educational sites such as MDN, Stackoverflow, FreeCodeCamp and so on, for sharing your knowledge and helping people across the globe who genuenly want to learn software development.
