@@ -45,7 +45,7 @@ p {
 }
 
 .card {
-  background-image: url("../images/bg-main-mobile.png");
+  background-image: url("/");
   background-repeat: no-repeat;
   background-size: cover;
   height: 240px;
@@ -58,7 +58,7 @@ p {
 }
 @media (min-width: 64em) {
   .card {
-    background-image: url("../images/bg-main-desktop.png");
+    background-image: url("/images/bg-main-desktop.png");
     height: 100%;
     width: 350px;
   }
@@ -106,7 +106,7 @@ p {
   display: flex;
   justify-content: end;
   align-items: center;
-  background-image: url("../images/bg-card-back.png");
+  background-image: url("/images/bg-card-back.png");
 }
 @media (min-width: 40em) {
   .card__back {
@@ -145,7 +145,7 @@ p {
   }
 }
 .card__front {
-  background-image: url("../images/bg-card-front.png");
+  background-image: url("/images/bg-card-front.png");
   top: -63px;
   left: -28px;
   padding: 18px 19px;
