@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [@Timbar09](https://github.com/Timbar09/FEM-Interactive-card-details-form.git)
-- Live Site URL: [Interactive-card-details-form](https://timbar09.github.io/FEM-Interactive-card-details-form/)
+- Live Site URL: [Interactive-card-details-form](https://fluffy-manatee-724450.netlify.app/)
 
 ## My process
 
